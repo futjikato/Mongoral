@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<fx:root alignment="center" hgap="10" vgap="10" type="javafx.scene.layout.GridPane" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/2.2">
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+    <!-- Headline -->
+    <Label text="Enter Mongo DB connection details" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+
+    <!-- Title field -->
+    <Label fx:id="titleLabel" text="Title" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="testField" promptText="Mongo DB Connection" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+</fx:root>

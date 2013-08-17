@@ -36,7 +36,6 @@ public class Database implements Initializable {
             database = connection.connect();
         } catch (MongoralException e) {
             e.printStackTrace();
-            Main.switchToLoginView();
             return;
         }
         initCollectionList();
