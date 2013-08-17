@@ -1,0 +1,1 @@
+{"connections":[{"port":"27017","db":"test","username":"","host":"127.0.0.1","name":"Con 1","password":""},{"port":"27017","db":"","username":"","host":"localhost","name":"Con 2","password":""},{"port":"27017","db":"database","username":"","host":"localhost","name":"New new new","password":""}]}
