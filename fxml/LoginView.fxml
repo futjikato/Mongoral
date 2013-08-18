@@ -11,13 +11,17 @@
 
 <?import de.futjikato.mongoral.nodes.*?>
 
+<?import java.net.URL?>
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/2.2">
     <children>
-        <SplitPane>
+        <SplitPane id="main-split" minWidth="600" >
             <items>
-                <ConnectionList fx:id="listConnections"/>
-                <ConnectionForm fx:id="formConnection"/>
+                <ConnectionList prefWidth="150" maxWidth="150" minWidth="150" fx:id="listConnections"/>
+                <ConnectionForm prefWidth="450" fx:id="formConnection"/>
             </items>
         </SplitPane>
     </children>
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
 </AnchorPane>

@@ -1,0 +1,4 @@
+#main-split {
+    -fx-box-border: transparent;
+    -fx-background-color: -fx-control-inner-background;
+}

@@ -28,8 +28,10 @@ public class ComMessage implements ComMessageInterface {
     public static ComMessage createComMessage(ComMessageType type, Object parameter) throws MongoralException {
         // check parameter class
         Class parameterClass = type.getParameterClass();
-        if(parameter.getClass() != parameterClass) {
-            throw new MongoralException("Message parameter does not match with required class.");
+        if(parameterClass != null) {
+            if(parameter.getClass() != parameterClass) {
+                throw new MongoralException("Message parameter does not match with required class.");
+            }
         }
 
         ComMessage message = new ComMessage();

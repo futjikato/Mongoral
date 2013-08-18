@@ -75,6 +75,7 @@ public class LoginView implements Observer {
         switch(message.getMessageType()) {
             // open login screen if connection was closed
             case CONNECTION_CLOSED:
+            case APP_START:
                 try {
                     show();
                 } catch (MongoralException e) {

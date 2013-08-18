@@ -5,6 +5,7 @@ import de.futjikato.mongoral.config.Config;
 import de.futjikato.mongoral.config.Connection;
 import de.futjikato.mongoral.nodes.ConnectionForm;
 import de.futjikato.mongoral.nodes.ConnectionList;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -31,14 +32,14 @@ public class LoginController implements Initializable {
 
     @FXML public ConnectionForm formConnection;
 
-    public TextField fieldDatabase;
-
-    public Pane paneConnectionError;
-
-    private Connection editing;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        formConnection.setConnectionList(listConnections);
+        // focus title input after rendering and stuff
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                formConnection.titleInput.requestFocus();
+            }
+        });
     }
 }

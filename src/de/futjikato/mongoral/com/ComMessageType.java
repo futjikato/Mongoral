@@ -1,5 +1,6 @@
 package de.futjikato.mongoral.com;
 
+import de.futjikato.mongoral.config.Config;
 import de.futjikato.mongoral.config.Connection;
 
 /**
@@ -10,7 +11,13 @@ import de.futjikato.mongoral.config.Connection;
  * To change this template use File | Settings | File Templates.
  */
 public enum ComMessageType {
+    APP_START(null),
+
+    CONFIG_CHANGED(Config.class),
+
     CONNECTION_CHANGED(Connection.class),
+    CONNECTION_ADDED(Connection.class),
+    CONNECTION_ESTABLISHED(Connection.class),
     CONNECTION_CLOSED(Connection.class);
 
     private Class parameterClass;

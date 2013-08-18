@@ -27,4 +27,10 @@ public class Com extends Observable {
         setChanged();
         notifyObservers(message);
     }
+
+    public void notifyAppStart() throws MongoralException {
+        ComMessage message = ComMessage.createComMessage(ComMessageType.APP_START, null);
+        setChanged();
+        notifyObservers(message);
+    }
 }

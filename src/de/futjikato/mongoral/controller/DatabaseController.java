@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
  * @todo Documentation
  * @category de.futjikato.mongoral.controller
  */
-public class Database implements Initializable {
+public class DatabaseController implements Initializable {
 
     public ListView<Collection> listCollections;
 
